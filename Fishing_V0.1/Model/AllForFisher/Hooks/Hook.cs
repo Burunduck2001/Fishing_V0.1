@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fishing_V0._1.Model.AllForFisher.Hooks
 {
-    abstract class Hook
+    public class Hook
     {
         public int Id { get; set; }
         public string Name { get; set; }

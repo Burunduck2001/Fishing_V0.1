@@ -69,12 +69,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\AllForFisher\Hooks\AllHooks\TestHook.cs" />
     <Compile Include="Model\Fish.cs" />
     <Compile Include="Model\AllForFisher\Backpack.cs" />
-    <Compile Include="Model\AllForFisher\Baits\AllBaits\TestBait.cs" />
     <Compile Include="Model\AllForFisher\Baits\Bait.cs" />
-    <Compile Include="Model\AllForFisher\FishingRods\AllRods\TestFRod.cs" />
     <Compile Include="Model\AllForFisher\FishingRods\FishingRod.cs" />
     <Compile Include="Model\AllForFisher\Hooks\Hook.cs" />
     <Compile Include="Model\Fisher.cs" />

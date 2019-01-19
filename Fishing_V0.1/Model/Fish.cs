@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Fishing_V0._1.Model
 {
-    class Fish
+    public class Fish
     {
         public int Id { get; set; }
         public int Weight { get; set; } //In killograms
