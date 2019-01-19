@@ -12,6 +12,7 @@ namespace Fishing_V0._1.Model
         public FishingRod FishingRod { get; set; }
         public Hook Hook { get; set; }
         public Bait Bait { get; set; }
+        public Location Location { get; set; }
 
         public int Power { get; set; }
         public int Luck { get; set; }
@@ -23,17 +24,18 @@ namespace Fishing_V0._1.Model
 
         public int SetPower()
         {
-            return Power; 
+            return Hook.Power+FishingRod.Power; 
         }
 
         public int SetLuck()
         {
-            return Luck;
+            return Hook.Luck+Bait.Luck;
         }
 
         public void ChangeStates()
         {
-
+            Power = SetPower();
+            Luck = SetLuck();
         }
 
         public Fisher()
@@ -41,6 +43,9 @@ namespace Fishing_V0._1.Model
             FishingRod = null;
             Hook = null;
             Bait = null;
+            Lvl = 1;
+            CoinsSilver = 100;
+            CoinsGold = 10;
         }
     }
 }

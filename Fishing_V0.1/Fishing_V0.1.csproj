@@ -63,6 +63,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\AllForFisher\Tackle.cs" />
+    <Compile Include="Model\GameEngine.cs" />
+    <Compile Include="Model\Location.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -75,7 +78,6 @@
     <Compile Include="Model\AllForFisher\FishingRods\FishingRod.cs" />
     <Compile Include="Model\AllForFisher\Hooks\Hook.cs" />
     <Compile Include="Model\Fisher.cs" />
-    <Compile Include="Model\TypeOfFish\TestFish.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

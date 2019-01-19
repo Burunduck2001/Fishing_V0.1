@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Fishing_V0._1.Model.AllForFisher.FishingRods
 {
-    public class FishingRod
+    public class FishingRod : Tackle
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
         int Strength { get; set; }
-        int Power { get; set; }
-        int Cost { get; set; }
-        int minLvl { get; set; }
+        public int Power { get; set; }
+        public FishingRod(int Id, string Name, int Cost, int minLvl, int Power, int Strength) : base(Id, Name, Cost, minLvl)
+        {
+            this.Strength = Strength;
+            this.Power = Power;
+        }
     }
 }
