@@ -9,9 +9,9 @@
         
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas >
+    <Canvas RenderTransformOrigin="0.493,0.497" >
 
-        <Button Name="Catch" Canvas.Right="81" Canvas.Bottom="120" Content="Тащить" Width="80" Height="40" FontFamily="Arial" />
+        <Button Name="Catch" Canvas.Right="82" Canvas.Bottom="120" Content="Тащить" Width="80" Height="40" FontFamily="Arial" />
 
         <Grid Name="Tackles" Height="80"  Width="250" Canvas.Left="40" Canvas.Bottom="20" >
             <Grid.ColumnDefinitions>
@@ -19,9 +19,9 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Удочка"/>
-            <Button Grid.Column="1" Content="Крючок"/>
-            <Button Grid.Column="2" Content="Наживка"/>
+            <Button Grid.Column="0" Content="Удочка" Name="CurrentFishingRod"/>
+            <Button Grid.Column="1" Content="Крючок" Name="CurrentHook"/>
+            <Button Grid.Column="2" Content="Наживка" Name ="CurrentBait"/>
         </Grid>
 
         <Grid Name="GameMenu" Height="85"  Width="140" Canvas.Bottom="20" Canvas.Right="50" >
@@ -34,10 +34,29 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Button Grid.Column="0" Grid.Row="0" Content="Рюкзак"/>
-            <Button Grid.Column="0" Grid.Row="1" Content="Справочник"/>
-            <Button Grid.Column="1" Grid.Row="0" Content="Магазин"/>
-            <Button Grid.Column="1" Grid.Row="1" Content="Карта"/>
+            <Button Grid.Column="0" Grid.Row="0" Content="Рюкзак" Name="Backpack"/>
+            <Button Grid.Column="0" Grid.Row="1" Content="Справочник" Name="Handbook"/>
+            <Button Grid.Column="1" Grid.Row="0" Content="Магазин" Name="Shop"/>
+            <Button Grid.Column="1" Grid.Row="1" Content="Карта" Name="Map"/>
+        </Grid>
+
+        <Grid  Name="PlayerMenu" Height="85"  Width="160" Canvas.Top="20" Canvas.Left="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Image Name="Avatar" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" />
+            <TextBlock Name="CurrentGold" Grid.Column="1" TextAlignment="Left">Золото:</TextBlock >
+            <TextBlock Name="CurrentSilver" Grid.Column="1" Grid.Row="1" TextAlignment="Left">Серебро:</TextBlock>
+            <TextBlock Name="CurrentLvl" Grid.Column="0" Grid.Row="2" TextAlignment="Center">1</TextBlock>
+            <TextBlock Name="CurrentExp" Grid.Column="1" Grid.Row="2" TextAlignment="Center">0/100</TextBlock>
         </Grid>
 
     </Canvas>
