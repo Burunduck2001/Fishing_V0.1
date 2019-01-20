@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Fishing_V0._1
 {
     /// <summary>
@@ -23,8 +24,9 @@ namespace Fishing_V0._1
         public MainWindow()
         {
             InitializeComponent();
-            
-        
+
+
+
         }
     }
 }

@@ -4,20 +4,42 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fishing_V0._1"
+        xmlns:Images="clr-namespace:Fishing_V0._1.Properties"
+        
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas>
-        <Button Name="Catch" Canvas.Right="80" Canvas.Bottom="120" Content="Тащить" Width="80" Height="40" FontFamily="Arial" />
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="79" Canvas.Left="25" Width="277" RenderTransformOrigin="0.296,5.048" Canvas.Top="10">
+    <Canvas >
+
+        <Button Name="Catch" Canvas.Right="81" Canvas.Bottom="120" Content="Тащить" Width="80" Height="40" FontFamily="Arial" />
+
+        <Grid Name="Tackles" Height="80"  Width="250" Canvas.Left="40" Canvas.Bottom="20" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Удочка"/>
+            <Button Grid.Column="1" Content="Крючок"/>
+            <Button Grid.Column="2" Content="Наживка"/>
         </Grid>
-        <Button Grid.Row="0" Content="ddd"/>
-        <Button Grid.Row="1" Content="ddd"/>
-        <Button Grid.Column="2" Content="ddd"/>
+
+        <Grid Name="GameMenu" Height="85"  Width="140" Canvas.Bottom="20" Canvas.Right="50" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" Grid.Row="0" Content="Рюкзак"/>
+            <Button Grid.Column="0" Grid.Row="1" Content="Справочник"/>
+            <Button Grid.Column="1" Grid.Row="0" Content="Магазин"/>
+            <Button Grid.Column="1" Grid.Row="1" Content="Карта"/>
+        </Grid>
+
     </Canvas>
 
 </Window>
