@@ -23,6 +23,8 @@ namespace Fishing_V0._1
         public MainWindow()
         {
             InitializeComponent();
+            
+        
         }
     }
 }
