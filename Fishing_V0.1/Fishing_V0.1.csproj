@@ -65,6 +65,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Model\AllForFisher\Tackle.cs" />
+    <Compile Include="Model\Fishes\Gudgeon.cs" />
     <Compile Include="Model\GameEngine.cs" />
     <Compile Include="Model\Location.cs" />
     <Compile Include="MainWindow.xaml.cs">

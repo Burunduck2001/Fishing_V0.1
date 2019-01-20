@@ -7,15 +7,15 @@ namespace Fishing_V0._1.Model
     public class Fish
     {
         public int Id { get; set; }
-        public double minWeight { get; set; } //In killograms
-        public double minSize { get; set; } //In metrs
-        public double maxWeight { get; set; } //In killograms
-        public double maxSize { get; set; } //In metrs
-        public int Price { get; set; }//In silver coins
         public Rarity rarity { get; set; }
         public string TypeName { get; set; }
         public int Exp { get; set; }
         public List<Bait> WhatFishEat { get; set; }// All baits that Fish can it
+        public double Power { get; set; }
+        public double Weight { get; set; }
+        public double Size { get; set; }
+        public int Price { get; set; }//In silver coins for 1kg
+        public int Chance { get; set; }
 
         public enum Rarity
         {
@@ -27,20 +27,31 @@ namespace Fishing_V0._1.Model
         }
         // public Bitmap ImageType { get; set; }
 
-        public Fish(int id, double minWeight, double maxWeight, double minSize, double maxSize, int price, Rarity rarity,
-            string typeName)
+        public Fish()
         {
-            Id = id;
-            this.minWeight = minWeight;
-            this.maxWeight = maxSize;
-            this.minSize = minSize;
-            this.maxSize = maxSize;
-            Price = price;
-            this.rarity = rarity;
-            TypeName = typeName;
+
         }
 
+        protected double GetSize(double minSize, double maxSize)
+        {
+            System.Random random = new System.Random();
+            minSize *= 1000;
+            maxSize *= 1000;
+            return random.Next((int)minSize, (int)maxSize) / 1000;
 
-        
+        }
+
+        protected double GetWeight(double minWeight, double maxWeight)
+        {
+            System.Random random = new System.Random();
+            minWeight *= 1000;
+            maxWeight *= 1000;
+            return random.Next((int)minWeight, (int)maxWeight) / 1000;
+
+        }
+
     }
 }
+        
+    
+

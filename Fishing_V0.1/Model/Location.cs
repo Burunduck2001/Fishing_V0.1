@@ -15,12 +15,12 @@ namespace Fishing_V0._1.Model
         //Background
         //Sound
 
-        public Location(int id, string name, int minlvl)
+        public Location(int id, string name, int minlvl,List<Fish> availableFishes)
         {
             Id = id;
             Name = name;
             minLvlEnter = minlvl;
-            AvailableFishes = new List<Fish>();
+            AvailableFishes = availableFishes;
         }
 
         public void AddFish(Fish fish)

@@ -1,6 +1,7 @@
 ﻿using Fishing_V0._1.Model.AllForFisher.Baits;
 using Fishing_V0._1.Model.AllForFisher.FishingRods;
 using Fishing_V0._1.Model.AllForFisher.Hooks;
+using Fishing_V0._1.Model.Fishes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,6 @@ namespace Fishing_V0._1.Model
         List<Bait> Baits = new List<Bait>();
         Fisher Fisher = new Fisher();
      
-        Fish Pescar = new Fish(0, 0.1, 0.2, 0.01, 0.1, 1, Fish.Rarity.Common, "Пескарь");
-
         
         public void InitializeComponent()
         {
@@ -43,9 +42,12 @@ namespace Fishing_V0._1.Model
             Baits.Add(new Bait(0, "Хлеб", 1, 1, 2));
         }
 
+
         public void CreateMap()
         {
-            Map.Add(new Location(0, "Плотина", 1));
+            List<Fish> FishesInPlotina = new List<Fish>();
+            FishesInPlotina.Add(new Gudgeon());
+            Map.Add(new Location(0, "Плотина", 1,FishesInPlotina));
         }
 
     }

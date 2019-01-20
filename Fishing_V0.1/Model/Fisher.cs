@@ -13,7 +13,6 @@ namespace Fishing_V0._1.Model
         public Hook Hook { get; set; }
         public Bait Bait { get; set; }
         public Location Location { get; set; }
-
         public int Power { get; set; }
         public int Luck { get; set; }
         public int Lvl { get; set; }
